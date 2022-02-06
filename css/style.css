@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Montserrat, serif;
+}
+
+body{
+  position: relative;
+}
+
+/* down-box  */
+
+.toggle-nav{
+  display: block;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+  width: 100vw;
+  position: fixed;    
+}
+
+.down-info{
+  display: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.39);
+  background-color: #f9f9f9;
+}
+
+.toggle-nav a{
+  text-decoration: none;
+  padding: 16px;
+  color: rgb(107, 106, 106);
+  font-weight: 600;
+}
+
+.fa-phone-square{
+  margin-right: 10px;
+}
+
+.double-down{
+  display: flex;
+  box-shadow: 0px -7px 23px -7px rgba(119, 119, 119, 0.86);
+  justify-content: center;
+  text-align: center;
+  color: grey;
+  width: 100vw;
+  background-color: #c6faf348;
+  height: 40px;
+}
+
+.fa-angle-double-down{
+  padding-top: 26px;
+}
+
+.toggle-nav input{
+  opacity: 0;
+  width: 100vw;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  top: 53px;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+input:checked +div{
+  display: flex;
+}
+/* end */
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+    background: url('../img/background.jpg') no-repeat;
+    background-size:100%;
+    margin: auto;
+    height: 30vh;
+    animation: scale-img 15s infinite;
+}
+
+@keyframes scale-img{
+  from{
+      background-size: 100%;
+  }
+  25%{
+    background-size: 105%;
+  }
+  50%{
+      background-size: 115%;
+  }
+  75%{
+    background-size: 105%;
+  }
+  to{
+      background-size: 100%;
+  }
+} 
+
+.logo{
+  width: 50vw;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border-radius: 15px;
+}
+
+@media screen and (min-width:700px) {
+  header{
+    height: 310px;
+  }
+
+  .logo{
+    width: 400px;
+    right: 100px;
+  }
+}
